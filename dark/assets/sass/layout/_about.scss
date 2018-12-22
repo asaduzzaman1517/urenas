@@ -1,0 +1,309 @@
+/* 5. About Me */
+.about-me {
+    .about-wrap {
+        position: relative;
+        z-index: 1;
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: $placeholder;
+            @include portrait-phone {
+                height: 350px;
+            }
+        }
+        .about-bg {
+            background: {
+                image: url('../images/about/about-bg.jpg');
+                repeat: no-repeat;
+                position: top;
+                size: cover;
+            }
+        }
+        .about-icons {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            padding: 10px;
+            @include translate(0, -50%);
+            border: 1px solid $border;
+            z-index: 2;
+            @include portrait-phone {
+                padding: 5px;
+            }
+            li {
+                margin: 10px 0;
+                @include portrait-phone {
+                    margin: 5px 0;
+                }
+                a {
+                    color: $lightText;
+                    background: $darkBG;
+                    padding: 7px;
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $border;
+                    text-align: center;
+                    @include border-radius(50%);
+                    @include transition(.2s);
+                    @include portrait-phone {
+                        padding: 10px;
+                    }
+                    &:hover {
+                        background: $primaryColor;
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 6. Education */
+.education {
+    .education-timeline {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: $border;
+            margin-left: -1px;
+            @include portrait-phone {
+                background: none;
+            }
+            @include landscape-phone {
+                background: none;
+            }
+            @include tablet {
+                background: none;
+            }
+        }
+        .single-learning {
+            h2 {
+                color: $darkText;
+                @include transition(.2s);
+            }
+            &:hover {
+                h2 {
+                    color: $primaryColor;
+                }
+            }
+        }
+        .learning-right {
+            position: relative;
+            @include portrait-phone {
+                overflow: hidden;
+            }
+            @include landscape-phone {
+                overflow: hidden;
+            }
+            @include tablet {
+                overflow: hidden;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -25px;
+                width: 20px;
+                height: 20px;
+                background: $lightBG;
+                margin-top: -12px;
+                border: 2px solid $border;
+                @include border-radius(50%);
+                @include transition(.2s);
+                @include portrait-phone {
+                    background: none;
+                    border: none;
+                }
+                @include landscape-phone {
+                    background: none;
+                    border: none;
+                }
+                @include tablet {
+                    background: none;
+                    border: none;
+                }
+            }
+            &:hover:before {
+                background: $primaryColor;
+                border: 2px solid transparent;
+                @include portrait-phone {
+                    background: none;
+                    border: none;
+                }
+                @include landscape-phone {
+                    background: none;
+                    border: none;
+                }
+                @include tablet {
+                    background: none;
+                    border: none;
+                }
+            }
+        }
+        .learning-left {
+            position: relative;
+            text-align: right;
+            @include portrait-phone {
+                text-align: left;
+                overflow: hidden;
+            }
+            @include landscape-phone {
+                text-align: left;
+                overflow: hidden;
+            }
+            @include tablet {
+                text-align: left;
+                overflow: hidden;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -25px;
+                width: 20px;
+                height: 20px;
+                background: $lightBG;
+                margin-top: -12px;
+                border: 2px solid $border;
+                @include border-radius(50%);
+                @include transition(.3s);
+                @include portrait-phone {
+                    background: none;
+                    border: none;
+                }
+                @include landscape-phone {
+                    background: none;
+                    border: none;
+                }
+                @include tablet {
+                    background: none;
+                    border: none;
+                }
+            }
+            &:hover:before {
+                background: $primaryColor;
+                border: 2px solid transparent;
+                @include portrait-phone {
+                    background: none;
+                    border: none;
+                }
+                @include landscape-phone {
+                    background: none;
+                    border: none;
+                }
+                @include tablet {
+                    background: none;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+/* 7. Experience */
+.experience {
+    .single-experience {
+        .experience-text {
+            background: $lightBG;
+            border: 1px solid $border;
+        }
+        h2 {
+            color: $darkText;
+            @include transition(.2s);
+        }
+        &:hover {
+            h2 {
+                color: $primaryColor;
+            }
+        }
+    }
+    .experience-left {
+        text-align: right;
+        @include portrait-phone {
+            text-align: left;
+        }
+        @include landscape-phone {
+            text-align: left;
+        }
+        @include tablet {
+            text-align: left;
+        }
+    }
+}
+/* 8. Profiles */
+.profiles {
+    .profiles-slider {
+        position: relative;
+        .single-slide {
+            .dribbble-icon {
+                color: $lightText;
+                font-size: 2rem;
+                background: $lightBG;
+                border: 1px solid $border;
+                padding: 10px;
+                width: 70px;
+                height: 70px;
+                display: inline-block;
+                text-align: center;
+                @include border-radius(50%);
+                @include transition(.2s);
+            }
+            .behance-icon {
+                @extend .dribbble-icon;
+            }
+            .pinterest-icon {
+                @extend .dribbble-icon;
+            }
+            .linkedin-icon {
+                @extend .dribbble-icon;
+            }
+            &:hover {
+                .dribbble-icon {
+                    background: $dribbble;
+                    border: 1px solid transparent;
+                }
+                .behance-icon {
+                    background: $behance;
+                    border: 1px solid transparent;
+                }
+                .pinterest-icon {
+                    background: $pinterest;
+                    border: 1px solid transparent;
+                }
+                .linkedin-icon {
+                    background: $linkedin;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+        .owl-dots {
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -30px;
+            @include translate(-50%, 0);
+            @include portrait-phone {
+                display: none;
+            }
+            @include landscape-phone {
+                display: none;
+            }
+            .owl-dot {
+                width: 15px;
+                height: 15px;
+                background: transparent;
+                border: 1px solid $border;
+                @include border-radius(50%);
+                margin: 0 6px;
+            }
+            .owl-dot.active {
+                background: $primaryColor;
+                border: 1px solid transparent;
+            }
+        }
+    }
+}

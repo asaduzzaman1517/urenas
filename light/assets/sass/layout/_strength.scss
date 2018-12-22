@@ -1,0 +1,101 @@
+/* 10. Services */
+.services {
+    .single-service {
+        border: 1px solid $border;
+        position: relative;
+        .service-icon {
+            font-size: 2rem;
+            background: $lightBG;
+            border: 1px solid $border;
+            padding: 10px;
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            text-align: center;
+            @include border-radius(50%);
+            @include transition(.2s);
+        }
+        &:hover {
+            .service-icon {
+                color: $darkBG;
+                background: $primaryColor;
+                border: 1px solid transparent;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            border: {
+                top: 5px solid $border;
+                left: 5px solid $border;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 30px;
+            height: 30px;
+            border: {
+                right: 5px solid $border;
+                bottom: 5px solid $border;
+            }
+        }
+    }
+}
+/* 11. Fun Facts */
+.fun-facts {
+    .single-counter {
+        border: 1px solid $border;
+        .counter-icon {
+            font-size: 2rem;
+            background: $lightBG;
+            border: 1px solid $border;
+            padding: 10px;
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            text-align: center;
+            @include border-radius(50%);
+            @include transition(.2s);
+        }
+        &:hover {
+            .counter-icon {
+                color: $darkBG;
+                background: $primaryColor;
+                border: 1px solid transparent;
+            }
+        }
+        h2 {
+            color: $primaryColor;
+        }
+    }
+}
+/* 12. Skills */
+.circle-progressbar {
+	position: relative;
+    span {
+        position: absolute;
+    	top: 50%;
+    	left: 0;
+    	width: 100%;
+    	font-size: 24px;
+    	line-height: 0;
+    }
+}
+/* 13. Clients */
+.clients {
+    .single-slide {
+        width: 100%;
+        height: 100px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

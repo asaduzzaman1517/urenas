@@ -1,0 +1,132 @@
+/* 15. Blog Details */
+.blog-details {
+    position: relative;
+    .top-section {
+        margin-bottom: 3rem;
+        .template-btn {
+            background: $lightBG;
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            @include translate(-50%, 0);
+            &:hover {
+                background: $primaryColor;
+            }
+        }
+    }
+    .blog-details-image {
+        width: 100%;
+        height: 270px;
+        border: 1px solid $border;
+        @include box-sizing(border-box);
+        background: {
+            color: $placeholder;
+            image: url('../images/blog-details/details-bg.jpg');
+            repeat: no-repeat;
+            position: center;
+            size: cover;
+        }
+    }
+    .diffrent-style {
+        background: $lightBG;
+        border: 1px solid $border;
+    }
+    .diffrent-style2 {
+        border: 1px solid $border;
+        .icon {
+            color: $primaryColor;
+        }
+        .text {
+            color: $darkText;
+            text-transform: capitalize;
+        }
+    }
+    .comment-section {
+        .comment {
+            border: 1px solid $border;
+            img {
+                width: 80px;
+                height: 80px;
+                border: 1px solid $border;
+                @include border-radius(50%);
+            }
+            .share-icon {
+                color: $primaryColor;
+            }
+            .text {
+                color: $darkText;
+            }
+        }
+        .reply1 {
+            background: $lightBG;
+        }
+        .reply2 {
+            @extend .reply1;
+        }
+    }
+    .sidebar {
+        .search-btn {
+            input {
+                color: $lightText;
+                background: $lightBG;
+                border: 1px solid $border;
+                padding: 13px 18px;
+                width: 100%;
+                @include box-sizing(border-box);
+            }
+        }
+        .categories {
+            border: 1px solid $border;
+            li {
+                border-bottom: 1px solid $border;
+                a {
+                    color: $lightText;
+                    text-transform: capitalize;
+                    padding-bottom: 8px;
+                    display: inline-block;
+                    @include transition(.2s);
+                    &:hover {
+                        color: $darkText;
+                    }
+                }
+            }
+        }
+        .recent-posts {
+            border: 1px solid $border;
+            .single-post {
+                img {
+                    width: 80px;
+                    height: 80px;
+                    border: 1px solid $border;
+                }
+                a {
+                    color: $lightText;
+                    @include transition(.2s);
+                }
+                &:hover {
+                    a {
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+        .keywords {
+            border: 1px solid $border;
+            .template-btn {
+                padding: 6px 10px;
+                background: $lightBG;
+                margin: 5px;
+                &:hover {
+                    background: $primaryColor;
+                    border: 1px solid $border;
+                }
+                @include desktop {
+                    padding: 10px 16px;
+                }
+                @include large-desktop {
+                    padding: 10px 16px;
+                }
+            }
+        }
+    }
+}

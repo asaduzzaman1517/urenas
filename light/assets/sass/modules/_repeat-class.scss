@@ -1,0 +1,35 @@
+/* 20. Repeat Class */
+.section-padding {
+    padding: 100px 0;
+}
+.section-top {
+    position: relative;
+    text-align: center;
+    margin-bottom: 80px;
+    .section-number {
+        font: {
+            size: 32px;
+            weight: 700;
+        }
+        @include portrait-phone {
+            font-size: 28px;
+        }
+        @include landscape-phone {
+            font-size: 28px;
+        }
+        color: $darkBG;
+        background: $primaryColor;
+        padding: .5rem 1rem;
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        @include translate(-50%, 0);
+    }
+}
+.hr-role {
+    width: 50px;
+    height: 5px;
+    background: $primaryColor;
+    display: block;
+    margin: 20px 0;
+}

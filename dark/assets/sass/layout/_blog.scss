@@ -1,0 +1,101 @@
+/* 14. Blog Page */
+.blog-area {
+    .single-blog {
+        border: 1px solid $border;
+        .blog-image {
+            width: 100%;
+            height: 270px;
+            position: relative;
+            background: {
+                color: $placeholder;
+                repeat: no-repeat;
+                position: center;
+                size: cover;
+            }
+            .hover-state {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $hoverOverlay;
+                @include opacity(0);
+                visibility: hidden;
+                @include transition(.2s);
+                .blog-icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    @include translate(-50%, -50%);
+                    color: $lightText;
+                    background: $lightBG;
+                    font-size: 24px;
+                    width: 50px;
+                    height: 50px;
+                    display: inline-block;
+                    padding: 12px;
+                    border: 1px solid $border;
+                    text-align: center;
+                    line-height: 0;
+                    @include border-radius(50%);
+                    @include transition(.2s);
+                    &:hover {
+                        background: $primaryColor;
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+        .blog-bg1 {
+            background-image: url('../images/blog/blog-bg1.jpg');
+        }
+        .blog-bg2 {
+            background-image: url('../images/blog/blog-bg2.jpg');
+        }
+        .blog-bg3 {
+            background-image: url('../images/blog/blog-bg3.jpg');
+        }
+        .blog-bg4 {
+            background-image: url('../images/blog/blog-bg4.jpg');
+        }
+        .blog-bg5 {
+            background-image: url('../images/blog/blog-bg5.jpg');
+        }
+        .blog-bg6 {
+            background-image: url('../images/blog/blog-bg6.jpg');
+        }
+        .blog-bg7 {
+            background-image: url('../images/blog/blog-bg7.jpg');
+        }
+        .blog-bg8 {
+            background-image: url('../images/blog/blog-bg8.jpg');
+        }
+        .blog-text {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                border: {
+                    right: 5px solid $border;
+                    bottom: 5px solid $border;
+                }
+            }
+            .blog-icon {
+                color: $primaryColor;
+            }
+            .text {
+                color: $darkText;
+            }
+        }
+        &:hover {
+            .hover-state {
+                @include opacity(1);
+                visibility: visible;
+            }
+        }
+    }
+}

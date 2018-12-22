@@ -1,0 +1,99 @@
+/* 9. Portfolio */
+.portfolio-area {
+    .single-portfolio {
+        position: relative;
+        z-index: 1;
+        .portfolio-image {
+            width: 100%;
+            height: 270px;
+            border: 1px solid $border;
+            @include box-sizing(border-box);
+            background: {
+                color: $placeholder;
+                repeat: no-repeat;
+                position: center;
+                size: cover;
+            }
+            @include tablet {
+                height: 200px;
+            }
+        }
+        .image-large {
+            height: 564px;
+            @include tablet {
+                height: 412px;
+            }
+        }
+        .portfolio-bg1 {
+            background-image: url('../images/portfolio/portfolio-bg1.jpg');
+        }
+        .portfolio-bg2 {
+            background-image: url('../images/portfolio/portfolio-bg2.jpg');
+        }
+        .portfolio-bg3 {
+            background-image: url('../images/portfolio/portfolio-bg3.jpg');
+        }
+        .portfolio-bg4 {
+            background-image: url('../images/portfolio/portfolio-bg4.jpg');
+        }
+        .portfolio-bg5 {
+            background-image: url('../images/portfolio/portfolio-bg5.jpg');
+        }
+        .portfolio-bg6 {
+            background-image: url('../images/portfolio/portfolio-bg6.jpg');
+        }
+        .portfolio-bg7 {
+            background-image: url('../images/portfolio/portfolio-bg7.jpg');
+        }
+        .portfolio-bg8 {
+            background-image: url('../images/portfolio/portfolio-bg8.jpg');
+        }
+        .portfolio-bg9 {
+            background-image: url('../images/portfolio/portfolio-bg9.jpg');
+        }
+        .hover-state {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $hoverOverlay;
+            z-index: 2;
+            @include opacity(0);
+            visibility: hidden;
+            @include transition(.4s);
+            .hover-icons {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                a {
+                    color: $lightText;
+                    background: $lightBG;
+                    font-size: 24px;
+                    width: 50px;
+                    height: 50px;
+                    display: inline-block;
+                    padding: 12px;
+                    border: 1px solid $border;
+                    text-align: center;
+                    line-height: 0;
+                    @include border-radius(50%);
+                    @include transition(.2s);
+                    &:hover {
+                        background: $primaryColor;
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+            .hover-text {
+                position: absolute;
+                left: 24px;
+                bottom: 24px;
+            }
+        }
+        &:hover .hover-state {
+            @include opacity(1);
+            visibility: visible;
+        }
+    }
+}

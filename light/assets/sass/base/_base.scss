@@ -1,0 +1,84 @@
+/* 1. Author CSS */
+body {
+    color: $lightText;
+    background: $darkBG;
+    font-family: $baseFont;
+}
+h1, h2 {
+    color: $lightText;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h3 {
+    color: $lightText;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+h4 {
+    color: $lightText;
+    text-transform: capitalize;
+}
+h5 {
+    color: $primaryColor;
+    text-transform: capitalize;
+}
+h6 {
+    color: $darkText;
+    text-transform: capitalize;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a:hover {
+    text-decoration: none;
+}
+@include portrait-phone {
+    h1 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6,
+    span,
+    p,
+    li,
+    a {
+        font-size: 14px;
+    }
+}
+@include landscape-phone {
+    h1 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6,
+    span,
+    p,
+    li,
+    a {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,11 @@
+/* 17. Footer */
+.footer-area {
+    border-top: 1px solid $border;
+    text-transform: capitalize;
+    a {
+        color: $primaryColor;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}

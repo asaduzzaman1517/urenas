@@ -1,0 +1,29 @@
+/* 3. Main Menu */
+.menu-area {
+    .single-menu {
+        background: $lightBG;
+        border: 1px solid $border;
+        width: 18%;
+        cursor: pointer;
+        @include transition(.2s);
+        @include portrait-phone {
+            width: 48%;
+        }
+        @include landscape-phone {
+            width: 48%;
+        }
+        .menu-icon {
+            color: $lightText;
+            font-size: 24px;
+        }
+        .menu-name {
+            color: $lightText;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        &:hover {
+            background: $primaryColor;
+            border: 1px solid transparent;
+        }
+    }
+}

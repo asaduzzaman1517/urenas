@@ -1,0 +1,76 @@
+/* 18. Button */
+// Template Btn
+.template-btn {
+    color: $lightText;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 12px 20px;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid $border;
+    cursor: pointer;
+    @include transition(.2s);
+    &:hover {
+        color: $darkBG;
+        background: $primaryColor;
+        border: 1px solid transparent;
+    }
+}
+// Portfolio Tab
+.portfolio-tab {
+    ul {
+        text-align: center;
+        li {
+            background: $lightBG;
+            display: inline;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 12px 16px;
+            border: 1px solid $border;
+            margin: 0 5px;
+            cursor: pointer;
+            @include transition(.2s);
+            @include portrait-phone {
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+            &:hover {
+                color: $darkBG;
+                background: $primaryColor;
+            }
+        }
+        .active {
+            color: $darkBG;
+            background: $primaryColor;
+        }
+    }
+}
+// Blog Pagination
+.blog-pagination {
+    li {
+        display: inline;
+        margin-right: 10px;
+        a {
+            color: $lightText;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 8px 16px;
+            display: inline-block;
+            background: $lightBG;
+            border: 1px solid $border;
+            @include transition(.2s);
+            &:hover {
+                color: $darkBG;
+                background: $primaryColor;
+                border: 1px solid transparent;
+            }
+        }
+    }
+    .active {
+        a {
+            color: $darkBG;
+            background: $primaryColor;
+            border: 1px solid transparent;
+        }
+    }
+}

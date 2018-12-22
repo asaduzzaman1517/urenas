@@ -1,0 +1,18 @@
+/* 19. Form */
+.contact-form {
+    input {
+        color: $lightText;
+        background: $lightBG;
+        border: 1px solid $border;
+        padding: 13px 18px;
+        width: 100%;
+        @include box-sizing(border-box);
+    }
+    textarea {
+        @extend input;
+    }
+}
+// Blog Details
+.leave-comment {
+    @extend .contact-form;
+}
